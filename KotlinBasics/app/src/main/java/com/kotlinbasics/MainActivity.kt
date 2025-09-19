@@ -29,6 +29,7 @@ class MainActivity : ComponentActivity() {
         }
         week02Variables()
         week02Functions()
+        week03Classes()
     }
 }
 
@@ -85,6 +86,23 @@ private fun week02Variables(){
     var nickname: String? = null
     nickname = "mirae"
     println("Nickname: $nickname ${nickname?.length}")
+}
+
+private fun week03Classes(){
+    println("===Kotlin Classes===")
+
+    class Student{
+        var name: String = ""
+        var age: Int = 0
+
+        fun introduce(){
+            println("Hello, my name is $name and I am $age years old.")
+        }
+    }
+    val student = Student()
+    student.name = "Mirae"
+    student.age = 23
+    student.introduce()
 }
 
 @Composable
