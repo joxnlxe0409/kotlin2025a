@@ -106,7 +106,7 @@ private fun week03Classes(){
     person1.introduce()
     person1.birthday()
 
-    class Animal(var species: String){
+    open class Animal(var species: String){
         var weight: Double = 0.0
         constructor(species: String, weight: Double) : this(species){
             this.weight = weight
@@ -115,12 +115,27 @@ private fun week03Classes(){
         fun makeSound(){
             Log.d("kotlinWeek03", "$species 가 소리를 냅니다.")
         }
+
+        open fun makesound1() {}
     }
     val puppy = Animal("웰시코기", 10.5)
     puppy.makeSound()
 
+    class Dog(species: String, weight: Double, val breed: String) : Animal(species, weight){
+        override fun makesound1() {
+        Log.d("kotlinWeek03", "$breed($species)가 멍멍 짖습니다.")
+            }
+    }
+    val dog = Dog("개", 12.5, "골든 리트리버")
+    dog.makesound1()
 
+    data class Book(val title: String, val author: String, val pages: Int)
 
+    val book1 = Book("코틀린 입문", "Lee", 300)
+    val book2 = Book("코틀린 입문", "Lee", 300)
+
+    Log.d("kotlinweek03", "book1 == book2: ${book1 == book2}")
+    Log.d("kotlinweek03", "book1: $book1")
 }
 
 private fun week03Collections(){
