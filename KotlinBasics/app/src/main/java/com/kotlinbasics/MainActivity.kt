@@ -30,6 +30,7 @@ class MainActivity : ComponentActivity() {
         week02Variables()
         week02Functions()
         week03Classes()
+        week03Collections()
     }
 }
 
@@ -103,6 +104,36 @@ private fun week03Classes(){
     student.name = "Mirae"
     student.age = 23
     student.introduce()
+
+    data class Person(val name: String, val age: Int)
+
+    var person1 = Person("Kim", 23)
+    var person2 = Person("Kim", 23)
+    
+    println("Person1: $person1")
+    println("Equal? ${person1 == person2}")
+}
+
+private fun week03Collections(){
+    println("===Kotlin Collections===")
+    val fruits = listOf("Apple", "Banana", "Orange") //immutable 리스트
+    val mutableFruits = mutableListOf("Kiwi", "Watermelon", "Cherry") //mutable 리스트
+
+    println("fruits: $fruits")
+    mutableFruits.add("Plum")
+    println("mutable fruits: $mutableFruits")
+
+    val scores = mapOf("Kim" to 100, "Lee" to 98, "Choi" to 96)
+    println("Scores: $scores")
+
+    for(fruit in fruits){
+        println("I like $fruits")
+    }
+    for(fruit in mutableFruits){
+        println("I like $mutableFruits")
+    }
+
+    scores.forEach{(name, score) -> println("$name scored $score")}
 }
 
 @Composable
