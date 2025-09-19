@@ -1,7 +1,7 @@
 
 Creative Commons Attribution-NonCommercial 4.0 International License
 
-Copyright [2025] [joxnlxe0409] 
+Copyright 2025 joxnlxe0409
 
 You are free to:
 - Share — copy and redistribute the material in any medium or format for non-commercial purposes.
